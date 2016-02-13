@@ -1,4 +1,4 @@
-## Student name (e.g. Ian McLoughlin)
+### Student name (e.g. Ian McLoughlin)
 #### Student number (e.g. G00123456)
 
 # Countdown Letters Game Solver
@@ -25,6 +25,8 @@ print(random.shuffle("My code is cool."))
 
 Previously it looks like this:
 ```python
+# Note that the following snippet of code was adapted from
+# the Stack Overflow post available here: http://www.so.com/post/123
 import nothing
 ```
 That didn't work too well, so I changed it.
