@@ -1,6 +1,6 @@
-# Student name
-# Student number
-# Date
+# John Conor Kenny
+# G00301273
+# 15/02/2016
 
 # Import random to shuffle a list.
 import random as rn
@@ -8,7 +8,7 @@ import random as rn
 # This preprocessing function loads the words list file into a Python list.
 def preprocessing(filename="wordslist.txt"):
   return []
-  
+
 # This is the function that actually checks the random letters for words.
 def check(letters):
   while (letters):
