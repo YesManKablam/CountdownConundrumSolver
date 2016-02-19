@@ -1,19 +1,31 @@
 # John Conor Kenny
 # G00301273
-# 15/02/2016
+# Countdown Solver
 
-# Import random to shuffle a list.
-import random as rn
+# Opens dictionary file.
+# Wordlist from http://www.mieliestronk.com/wordlist.html
+with open('wordlist.txt', 'r') as fileopen:
+    words = [line.strip() for line in fileopen]
 
-# This preprocessing function loads the words list file into a Python list.
-def preprocessing(filename="wordslist.txt"):
-  return []
+# Takes input from console to use as the anagram.
+# This is only really for testing.
+testInput = input('Enter word to find: ')
 
-# This is the function that actually checks the random letters for words.
-def check(letters):
-  while (letters):
-    letters.pop()
-  return []
+# Running time for the algorithm.
+# It starts here, otherwise it takes into account waiting for user input.
+import time
+start_time = time.time()
 
-# This function is just a wrapper that shows how my script works.
-# It does the preprocessing, then creates a random list of letters, and finally runs the solver.
+# The permutations script will generate every possible combo of a word.
+# This does not currently match the countdown rule however.
+# If you enter a 9 letter word, it will only return the 9 letter anagrams.
+# But it's mad fast and this whole thing is 9 lines including the timing function
+from itertools import permutations
+perms = [''.join(p) for p in permutations(testInput)]
+
+# Returns where the permutations match the dictionary files.
+# Using sets here to remove any duplicates.
+print(set(words) & set(perms))
+
+# Prints running time of the script.
+print("--- %s seconds ---" % (time.time() - start_time))
